@@ -1,0 +1,83 @@
+% Created by Jiri Kubik, 2022
+% '-> based on previous template by: Petr Cizek, 2018
+% '-> template-files structure is based on: 
+%     https://www.lucidchart.com/techblog/2016/12/07/how-to-make-a-presentation-in-latex/
+
+% This file:
+% "Defines the colors used in various parts of the theme,
+% e.g.,the color for frame titles or the background color" and the font styles
+
+% define GyBot green variations from Logo
+\RequirePackage{xcolor}
+\definecolor{gybot1green}{rgb}{0.494, 0.729, 0.000}
+\definecolor{gybot2green}{rgb}{0.310, 0.659, 0.000}
+\definecolor{gybot3green}{rgb}{0.310, 0.549, 0.051}
+\definecolor{gybot4green}{rgb}{0.000, 0.455, 0.216}
+
+\definecolor{gybotgreen}{rgb}{0.000, 0.455, 0.216}
+
+% styles and colors related to the first page
+% reseting typset using \normalfont
+% '-> see: https://latexref.xyz/Font-styles.html
+\setbeamerfont{author}{series=\normalfont, size=\normalsize}
+\setbeamercolor*{author}{fg=black}
+\setbeamerfont{title}{series=\bf, size=\Large}
+\setbeamercolor*{title}{fg=gybotgreen}
+\setbeamerfont{institute}{size=\small}
+\setbeamercolor*{institute}{fg=black}
+
+% styles related to the headline
+\setbeamercolor{headline} {fg=white}
+\setbeamerfont{headlinetitle} {series=\bf, size={\fontsize{11.5pt}{14pt}}}
+\setbeamerfont{headlineauthor} {series=\normalfont, size=\footnotesize}
+\setbeamerfont{headlineframetitle} {series=\bf, size=\Large}
+
+% styles related to the footline
+% '-> set footline color to CTUblue
+\setbeamercolor{footline} {fg=gybotgreen}
+% '-> set footline text font
+\setbeamerfont{footlinetext} {series=\normalfont, size=\scriptsize}
+% '-> set slide counter font
+\setbeamerfont{footlineslidecnt} {series=\normalfont, size=\scriptsize}
+
+% styles related to the frame title
+\setbeamercolor{frametitle}{fg=gybotgreen}
+\setbeamerfont{frametitle}{series=\bf}
+
+%% itemize settings
+% '-> original triangular bullet-symbol
+% \setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+% '-> set all three item-levels to the respective symbols and colors
+%     '-> highest level
+\setbeamertemplate{itemize item}[square]
+\setbeamercolor{itemize item}{fg=gybotgreen}
+%     '-> middle level
+\setbeamertemplate{itemize subitem}[square]
+\setbeamercolor{itemize subitem}{fg=gybotgreen}
+%     '-> lowest level
+\setbeamertemplate{itemize subsubitem}[triangle]
+\setbeamercolor{itemize subsubitem}{fg=gybotgreen}
+% '-> set subitem level size
+\setbeamertemplate{itemize/enumerate subbody begin}{\footnotesize}
+
+% '-> set enumerate symbols color
+\setbeamercolor{enumerate item}{fg=gybotgreen}
+\setbeamertemplate{enumerate item}{\quad\small\insertenumlabel.}
+\setbeamercolor{enumerate subitem}{fg=gybotgreen}
+\setbeamertemplate{enumerate subitem}{\alph{enumii}.}
+\setbeamercolor{enumerate subsubitem}{fg=gybotgreen}
+\setbeamertemplate{enumerate subsubitem}{\roman{enumiii}.}
+
+% '-> set sections marks in table of content
+%     NOTE: ok, I've never use that
+\setbeamertemplate{sections/subsections in toc}[square]
+
+% '-> set enumerate margins
+\setbeamersize{text margin left=15pt,text margin right=15pt} 
+\setlength{\leftmargini}{12pt}
+%\addtolength{\leftmargini}{\labelsep}
+\setlength{\leftmarginii}{12pt}
+%\addtolength{\leftmarginii}{\labelsep}
+\setlength{\leftmarginiii}{12pt}
+%\addtolength{\leftmarginiii}{\labelsep}
+
