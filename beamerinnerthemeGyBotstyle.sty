@@ -1,0 +1,68 @@
+% Created by Jiri Kubik, 2022
+% '-> based on previous template by: Petr Cizek, 2018
+% '-> template-files structure is based on: 
+%     https://www.lucidchart.com/techblog/2016/12/07/how-to-make-a-presentation-in-latex/
+
+% This file:
+% "Defines the appearance of any items that make up the slides central content,
+% e.g., lists or the title on the title page"
+
+% adding commands used
+% '-> indlude paths
+\input{gybot-paths.tex}
+% '-> include highlighting commands
+\input{\templatepath/gybot-commands.tex}
+
+% Requirement
+\RequirePackage{tikz}
+
+%%%%%%%%%%%%%%
+% TITLE PAGE %
+%%%%%%%%%%%%%%
+
+% NO IDEA section
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0em}
+
+\defbeamertemplate*{title page}{ctu}[1][]
+{
+
+  % text block
+  \begin{centering}
+    % title related
+    % '-> set color font
+    \usebeamercolor[fg]{title}%
+    % '-> add text in right font
+    \usebeamerfont{title}{\inserttitle}%
+    % add small space
+    \vskip0.7cm%
+    % author related
+    % '-> set color font
+    \usebeamercolor[fg]{author}%
+    % '-> add text in right font
+    \usebeamerfont{author}{\insertauthor}%
+    % add small spaces
+    \vskip0.7cm%
+    % institude related
+    % '-> set color font
+    \usebeamercolor[fg]{institute}%
+    % '-> add text in right font
+    \usebeamerfont{institute}{\insertinstitute}
+    \vskip0.1cm
+  \end{centering}
+}
+
+%%%%%%%%%%%%%%%
+% FRAME TITLE %
+%%%%%%%%%%%%%%%
+\defbeamertemplate*{frametitle}{texsx}[1][]
+{   
+  \ifx\compact\undefined
+    \vspace{-0.4cm}
+    \begin{center}
+        \usebeamerfont{frametitle}{\insertframetitle}
+    \end{center}
+    \vskip-0.8cm
+  \fi
+}
