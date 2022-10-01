@@ -1,0 +1,48 @@
+% Created by Jiri Kubik, 2022
+% '-> based on previous template by: Petr Cizek, 2018
+
+% This file:
+% Defines commands for highligting the text in presentations and abbrevations
+% USAGE: 
+% do not input if you are already using the gb-style sty file
+
+%%%%%%%%%%%%%%%%
+% ABBREVATIONS %
+%%%%%%%%%%%%%%%%
+% Institution and courses abbrevations
+\usepackage[utf8]{inputenc}
+\newcommand{\GyBot}{Gymnázium Botičská}
+\newcommand{\ps}{Přírodovědný seminář 3D tisk} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% HIGHLIGHTING COMMANDS %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% '-> commands are free to use for higlighting the text within the presentation body
+
+% required by color defintion
+\RequirePackage{xcolor}
+% (re)define color - change to highlight to differenc color
+\definecolor{gybothighlightgreen}{rgb}{0.000, 0.455, 0.216}
+% add new commands for gb blue coloured-text
+\newcommand{\textgbbf}[1]{{\color{gybothighlightgreen}\bf #1}}
+\newcommand{\textgbnf}[1]{{\color{gybothighlightgreen}\normalfont #1}}
+\newcommand{\textgb}[1]{{\color{gybothighlightgreen}\normalfont #1}}
+\newcommand{\emphgb}[1]{\emph{\color{gybothighlightgreen} #1}}
+\newcommand{\textgbit}[1]{{\color{gybothighlightgreen}\it #1}}
+% add new command for book citation
+\newcommand{\bibcit}[4]{\parbox{\textwidth}{\tiny \textgbbf{#1}: \textit{#2}, \textgbnf{#3}, #4}}
+% add new shole citationx
+% '-> TODO: improve big citation visual
+\newcommand{\bibligraphycitation}[4]{%
+  \scriptsize%
+  \begin{thebibliography}{1c}%
+    \bibitem[1b]{1b}
+    {\textgbbf{#1}}%
+    \newblock{\it #2}%
+    \newblock{\textgb{#3}, \color{black} #4.}%
+  \end{thebibliography}
+}
+
+% TODO add URL style
+
+
