@@ -12,9 +12,9 @@ target_path=$script_dirpath"/../"
 # '-> based on: https://www.cyberciti.biz/faq/bash-get-basename-of-filename-or-directory-name/
 submodule_dirname=${script_dirpath##*/}
 # name of the main style file
-style_filename="beamerthemeCTUstyle.sty"
+style_filename="beamerthemeGyBotstyle.sty"
 # filename where all paths are defined
-path_filename="ctu-paths.tex"
+path_filename="gybot-paths.tex"
 
 # copy the main style file into the parent directory
 cp $script_dirpath"/"$style_filename $target_path$style_filename
